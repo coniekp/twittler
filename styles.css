@@ -1,0 +1,86 @@
+* {
+	margin:auto;
+}
+
+body {
+  background-color: #55a5c1;
+}
+
+#banner-top, #banner-bottom{
+	height: 50px;
+	background-color: #0b465b;
+}
+
+#container{
+	margin:0px auto 0px auto;
+	height:100%;
+	width: 50%;
+	background-color: White;
+}
+
+h1 {
+	float:left;
+	padding:5%;
+	font-size:400%;
+	font-family: Helvetica;
+	font-weight: bold;
+	color: #0b465b;
+}
+
+#refresh-button {
+  float:right;
+  margin:60px 80px 10px 10px;
+  cursor:pointer;
+  width:7%;
+  height:7%;
+}
+
+.scrollbox {
+	clear:both;
+	height: 500px;
+	width:95%;
+	overflow-y:scroll;
+	visibility: hidden;
+	transition: visibility 0s 0.2s;
+}
+
+.feed, .scrollbox:hover, .scrollbox:focus {
+	visibility: visible;
+}
+
+
+.tweet-container{
+	margin: 10px;
+	padding: 10px;
+	background-color: White;
+	border-width: 2px;
+	border-style:solid;
+	border-color: #c9cfd8;
+	border-radius:7px;
+}
+
+.nametag {
+	padding: 10px 20px 10px 20px;
+	float:left;
+	font-size:large;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+.timestamp {
+	padding: 10px 20px 10px 20px;
+	float:right;
+	font-size:small;
+	font-family: Helvetica;
+	font-style:italic;
+
+}
+
+.message {
+	padding: 20px;
+	clear:both;
+	font-size:x-large;
+	font-family: Helvetica;
+}
+
+
