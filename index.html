@@ -4,55 +4,26 @@
     <link rel="stylesheet" href="styles.css">
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
   </head>
   <body>
-    <div id="banner-top"></div>
-    <div id="container">
-      <h1>Tweets</h1>
+    <div class="banner-top"></div>
+    <div class="scrollbox-user">
+      <input id="close-button" type="image" src="close.png"></input>
+      <div class="feed-user">
+      </div>
+    </div>
+    <div class="main-feed-container">
+      <h1 id="header">Tweets</h1>
       <input id="refresh-button"  type="image" src="refresh.png"></input>
-      <div class="scrollbox">
-        <div class="feed">
+      <div class="scrollbox-container">
+        <div class="scrollbox-home">
+         <div class="feed-home">
+         </div>
         </div>
       </div>
     </div>
-    <div id="banner-top"></div>
-    <script>
-
-      $(document).ready(function(){
-        
-
-        var $div = $('.feed');
-        $div.html('');
-
-        var index = streams.home.length - 1; //this index style order messages chronologically - latest at the bottom?
-        while(index >= 0){
-          var tweet = streams.home[index];
-          //create nametag div containing user name
-          var $user = $('<div class="nametag"></div>');
-          $user.text('@' + tweet.user);
-
-          //create timestamp div containing age of tweet
-          var currentTime = new Date();
-          var tweetAge = currentTime.getTime()-tweet.created_at.getTime();
-          var $timestamp = $('<div class="timestamp"></div>');
-          $timestamp.text(tweetAge + ' seconds ago');
-          
-          //create message div containing tweet message
-          var $message = $('<div class="message"></div>');
-          $message.text(tweet.message);
-
-          //create tweet container div and append tweet elements to it
-          var $tweetContainer = $('<div class="tweet-container"></div>');
-          $user.appendTo($tweetContainer);
-          $timestamp.appendTo($tweetContainer);
-          $message.appendTo($tweetContainer);
-          $tweetContainer.appendTo($div);
-
-          index -= 1;
-        }
-
-      });
-
-    </script>
+    <div class="banner-bottom"></div>
+    <script src="main.js"></script>
   </body>
 </html>

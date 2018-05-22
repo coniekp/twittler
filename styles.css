@@ -6,16 +6,17 @@ body {
   background-color: #55a5c1;
 }
 
-#banner-top, #banner-bottom{
+.banner-top, .banner-bottom{
 	height: 50px;
 	background-color: #0b465b;
 }
 
-#container{
+.main-feed-container{
 	margin:0px auto 0px auto;
 	height:100%;
 	width: 50%;
 	background-color: White;
+
 }
 
 h1 {
@@ -25,29 +26,55 @@ h1 {
 	font-family: Helvetica;
 	font-weight: bold;
 	color: #0b465b;
+	cursor:pointer;
 }
 
 #refresh-button {
   float:right;
   margin:60px 80px 10px 10px;
   cursor:pointer;
-  width:7%;
-  height:7%;
+  width:40px;
+  height:40px;
 }
 
-.scrollbox {
+#close-button {
+  float:right;
+  margin: 5px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+.scrollbox-user{
+	position: absolute;
+	z-index: 1;
+	display: none;
+	background-color:White;
+	height:700px;
+	width: 50%;
+	border-width: 4px;
+	border-style: solid;
+	border-color: White;
+	border-radius: 7px;
+	overflow-y:scroll;
+}
+
+.feed-user {
 	clear:both;
-	height: 500px;
-	width:95%;
+}
+
+.scrollbox-home{
+	clear:both;
+	height: 700px;
+	width: 95%;
 	overflow-y:scroll;
 	visibility: hidden;
 	transition: visibility 0s 0.2s;
 }
 
-.feed, .scrollbox:hover, .scrollbox:focus {
+.feed-home, .scrollbox-home:hover, .scrollbox-home:focus {
 	visibility: visible;
 }
-
 
 .tweet-container{
 	margin: 10px;
@@ -65,6 +92,7 @@ h1 {
 	font-size:large;
 	font-family: Helvetica;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .timestamp {
