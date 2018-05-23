@@ -1,40 +1,62 @@
-* {
-	margin:auto;
-}
-
 body {
-  background-color: #55a5c1;
+  background: linear-gradient(#fdfff9, #94d1c5);
 }
 
 .banner-top, .banner-bottom{
 	height: 50px;
-	background-color: #0b465b;
+	background: linear-gradient(#fcb59f,#fc9d88,#fcb59f);
+	margin:auto 50px auto 50px;
+	border-width: .5px;
+	border-style: solid;
+	border-color: #bff2df;
+	border-radius: 7px;
+
 }
 
 .main-feed-container{
 	margin:0px auto 0px auto;
 	height:100%;
-	width: 50%;
-	background-color: White;
+	width: 60%;
+	background: linear-gradient(white, #ffe1bc);
 
 }
 
 h1 {
 	float:left;
-	padding:5%;
+	margin: 4% auto 4% 10%;
 	font-size:400%;
-	font-family: Helvetica;
+	font-family: Verdana;
 	font-weight: bold;
-	color: #0b465b;
+	-webkit-text-stroke: 0.5px white;
+	color: #57bab3;
+	text-shadow: 0 0 15px #9ce5cc;
 	cursor:pointer;
+}
+
+h1:active{
+	color:#e5aca2;
+	text-shadow: 0 0 15px #ffcea3;
 }
 
 #refresh-button {
   float:right;
-  margin:60px 80px 10px 10px;
+  margin:6% 15% 3% auto;
   cursor:pointer;
   width:40px;
   height:40px;
+  opacity: .5;
+  filter: saturate(3);
+  transition-duration :0.5s ;
+  transition-property: transform;
+}
+
+#refresh-button:hover {
+  transform:rotate(-360deg);
+  -webkit-transform:rotate(-360deg);
+}
+
+#refresh-button:active {
+	filter: hue-rotate(190deg);
 }
 
 #close-button {
@@ -43,6 +65,10 @@ h1 {
   cursor: pointer;
   width: 60px;
   height: 60px;
+}
+
+#close-button:active {
+	filter: hue-rotate(190deg);
 }
 
 .scrollbox-user{
@@ -65,8 +91,9 @@ h1 {
 
 .scrollbox-home{
 	clear:both;
+	margin: 5%;
 	height: 700px;
-	width: 95%;
+	width: 90%;
 	overflow-y:scroll;
 	visibility: hidden;
 	transition: visibility 0s 0.2s;
@@ -80,10 +107,10 @@ h1 {
 	margin: 10px;
 	padding: 10px;
 	background-color: White;
-	border-width: 2px;
+	border-width: 1px;
 	border-style:solid;
-	border-color: #c9cfd8;
-	border-radius:7px;
+	border-color: #ffe1bc;
+	border-radius:15px;
 }
 
 .nametag {
@@ -92,7 +119,14 @@ h1 {
 	font-size:large;
 	font-family: Helvetica;
 	font-weight: bold;
+	text-shadow: 0 0 9px #e8fdff;
+	color: #39726e;
 	cursor: pointer;
+}
+
+.nametag:hover {
+	text-shadow: 0 0 9px #f7b613;
+	color: #066770;
 }
 
 .timestamp {
@@ -101,6 +135,7 @@ h1 {
 	font-size:small;
 	font-family: Helvetica;
 	font-style:italic;
+	color: #39726e;
 
 }
 
@@ -109,6 +144,7 @@ h1 {
 	clear:both;
 	font-size:x-large;
 	font-family: Helvetica;
+	color: #39726e;
 }
 
 
