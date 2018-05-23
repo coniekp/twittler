@@ -40,10 +40,10 @@ h1:active{
 
 #refresh-button {
   float:right;
-  margin:6% 15% 3% auto;
+  margin:10% 15% auto auto;
   cursor:pointer;
-  width:40px;
-  height:40px;
+  width:30px;
+  height:30px;
   opacity: .5;
   filter: saturate(3);
   transition-duration :0.5s ;
@@ -70,6 +70,51 @@ h1:active{
 #close-button:active {
 	filter: hue-rotate(190deg);
 }
+
+.visitor-container{
+	clear:both;
+	height: 40px;
+	width: 80%;
+	margin-left:10%;
+	margin-bottom:5%;
+}
+
+#submit-button{
+  float:right;
+  width: 15%;
+  height: 95%;
+  filter:hue-rotate(-20deg);
+}
+
+#submit-button:active{
+	filter:hue-rotate(155deg);
+}
+
+#visitor-tweet{
+  float:right;
+  width: 80%;
+  border-color: #9ce5cc;
+  border-style:solid;
+  border-width: 4px;
+  border-radius: 8px;
+  font-family:Helvetica;
+  font-size:large;
+  padding: 10px;
+  color:#39726e;
+}
+
+#visitor-tweet:focus{
+	border-color: #fcb59f;
+}
+
+::placeholder {
+	color:#9ce5cc;
+	font-family: Helvetica;
+	font-size: large;
+	padding-left:7px;
+
+}
+
 
 .scrollbox-user{
 	position: absolute;

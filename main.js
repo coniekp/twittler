@@ -1,8 +1,5 @@
 $(document).ready(function(){
   
-  var now = moment();
-  
-
   var $feed = $('.feed-home');
   $feed.html('');
   var feedLength = streams.home.length;
@@ -18,7 +15,6 @@ $(document).ready(function(){
   var makeTimestampDiv = function (tweetObj){
     //create timestamp div containing age of tweet
     var currentTime = new Date();
-    //var tweetAge = currentTime.getTime()-tweetObj.created_at.getTime();
     var $timestamp = $('<div class="timestamp"></div>');
     $timestamp.text(moment().format("DD MMM, YYYY  HH:MM a"));
 
@@ -90,12 +86,31 @@ $(document).ready(function(){
     feedLength = streams.home.length;
     pushTweetsToFeed(index, feedLength);
   }
+
+  var getVisitorTweet = function(){
+    return {user: 'anonymous', 
+      message: $('#visitor-tweet').val(),
+      created_at: moment.now()};
+  }
+
+  var pushTweetToStream = function (tweetObj){
+    streams.visitor.push(tweetObj);
+    streams.home.push(tweetObj);
+  }
+
+  var addVisitorTweetToFeed = function(){
+    var tweet = getVisitorTweet();
+    pushTweetToStream(tweet);
+    refreshFeed();
+    $('#visitor-tweet').val('');
+  }
   
   //add click listener to refresh button
   $('#refresh-button').click(refreshFeed);
   $('#header').click(refreshFeed);
   $('#close-button').click(closeUserTweets);
   $(document).on('click', '.nametag', displayUserTweets);
+  $('#submit-button').click(addVisitorTweetToFeed);
 
   //first batch of tweets
   pushTweetsToFeed(0, feedLength);
