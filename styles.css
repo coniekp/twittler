@@ -39,20 +39,20 @@ h1:active{
 }
 
 #refresh-button {
-  float:right;
-  margin:10% 15% auto auto;
-  cursor:pointer;
-  width:30px;
-  height:30px;
-  opacity: .5;
-  filter: saturate(3);
-  transition-duration :0.5s ;
-  transition-property: transform;
+    float:right;
+    margin:10% 15% auto auto;
+    cursor:pointer;
+    width:30px;
+    height:30px;
+    opacity: .5;
+    filter: saturate(3);
+    transition-duration :0.5s ;
+    transition-property: transform;
 }
 
 #refresh-button:hover {
-  transform:rotate(-360deg);
-  -webkit-transform:rotate(-360deg);
+    transform:rotate(-360deg);
+    -webkit-transform:rotate(-360deg);
 }
 
 #refresh-button:active {
@@ -60,11 +60,11 @@ h1:active{
 }
 
 #close-button {
-  float:right;
-  margin: 5px;
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
+    float:right;
+    margin: 5px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
 }
 
 #close-button:active {
@@ -80,10 +80,10 @@ h1:active{
 }
 
 #submit-button{
-  float:right;
-  width: 15%;
-  height: 95%;
-  filter:hue-rotate(-20deg);
+    float:right;
+    width: 15%;
+    height: 95%;
+    filter:hue-rotate(-20deg);
 }
 
 #submit-button:active{
@@ -91,16 +91,16 @@ h1:active{
 }
 
 #visitor-tweet{
-  float:right;
-  width: 80%;
-  border-color: #9ce5cc;
-  border-style:solid;
-  border-width: 4px;
-  border-radius: 8px;
-  font-family:Helvetica;
-  font-size:large;
-  padding: 10px;
-  color:#39726e;
+    float:left;
+    width: 80%;
+    border-color: #9ce5cc;
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 8px;
+    font-family:Helvetica;
+    font-size:large;
+    padding: 10px;
+    color:#39726e;
 }
 
 #visitor-tweet:focus{
