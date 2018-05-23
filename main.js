@@ -20,7 +20,7 @@ $(document).ready(function(){
     var currentTime = new Date();
     //var tweetAge = currentTime.getTime()-tweetObj.created_at.getTime();
     var $timestamp = $('<div class="timestamp"></div>');
-    $timestamp.text(moment(tweetObj.created_at).format("D MMM, YYYY h:mm a"));
+    $timestamp.text(moment().format("DD MMM, YYYY  HH:MM a"));
 
     return $timestamp;
   }
