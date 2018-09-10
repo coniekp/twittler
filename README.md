@@ -1,2 +1,4 @@
-# twittler
-This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project was worked on with a pair.
+# Holler
+A chat UI I built using vanilla JS
+
+![Alt text](https://media.giphy.com/media/X9QSGOGyqv6CR7NKKo/giphy.gif "Holler demo")
